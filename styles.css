@@ -218,6 +218,69 @@ img {
   transform: translateY(-3px);
 }
 
+@media screen and (max-width: 991px) {
+  .navbar .nav-container {
+    padding: 0 20px;
+  }
+  .navbar .menu-toggle {
+    display: flex;
+    z-index: 1001;
+  }
+  .navbar .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    background-color: white;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    padding: 80px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  .navbar .nav-menu li {
+    margin: 15px 0;
+  }
+  .navbar .nav-menu .nav-link {
+    color: #032221;
+    font-size: 1.1rem;
+  }
+  .navbar .nav-menu .nav-link:after {
+    bottom: -3px;
+  }
+  .navbar .nav-menu .nav-btn {
+    margin-top: 20px;
+  }
+  .navbar .nav-menu.active {
+    right: 0;
+  }
+  .navbar.menu-open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .navbar.menu-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar.menu-open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+@media screen and (max-width: 576px) {
+  .navbar {
+    padding: 15px 0;
+  }
+  .navbar .logo img {
+    height: 40px;
+    width: 55px;
+  }
+  .navbar .logo .logo-text {
+    font-size: 1rem;
+  }
+  .navbar .nav-menu {
+    width: 85%;
+    padding: 70px 0;
+  }
+}
 .hero {
   height: 100vh;
   background-image: url("https://images.unsplash.com/photo-1533130061792-64b345e4a833?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");

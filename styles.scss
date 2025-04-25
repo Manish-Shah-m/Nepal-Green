@@ -265,7 +265,89 @@ img {
       }
     }
   }
-
+  @media screen and (max-width: 991px) {
+    .navbar {
+      .nav-container {
+        padding: 0 20px;
+      }
+      
+      .menu-toggle {
+        display: flex;
+        z-index: 1001;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        background-color: white;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        padding: 80px 0;
+        text-align: center;
+        transition: $transition;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        
+        li {
+          margin: 15px 0;
+        }
+        
+        .nav-link {
+          color: $dark-color;
+          font-size: 1.1rem;
+          
+          &:after {
+            bottom: -3px;
+          }
+        }
+        
+        .nav-btn {
+          margin-top: 20px;
+        }
+        
+        &.active {
+          right: 0;
+        }
+      }
+      
+      &.menu-open {
+        .bar:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        
+        .bar:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .navbar {
+      padding: 15px 0;
+      
+      .logo {
+        img {
+          height: 40px;
+          width: 55px;
+        }
+        
+        .logo-text {
+          font-size: 1rem;
+        }
+      }
+      
+      .nav-menu {
+        width: 85%;
+        padding: 70px 0;
+      }
+    }
+  }
 // Hero Section
 .hero {
   height: 100vh;
